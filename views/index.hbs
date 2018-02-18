@@ -1,6 +1,20 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!--Import materialize.css-->
+<link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+<script type="text/javascript" src="jquery/jquery.min.js"></script>
+<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+<script type="text/javascript" src="stylesheets/style.css"></script>
 
-<div class="container-fluid">
-    <h1 class="header">FreeCodeCamp API Basejump: URL Shortener Microservice</h1>
+<div class="container teal">
+    <div class='card-panel z-depth-5'>
+    <h1 id='title' class="header ">URL Shortener Microservice</h1>
+    <form>
+        <div class="input-field">
+        <label>Enter URL to shorten</label>
+        <input type='text' placeholder='Enter Url'>
+        </div>
+        <button type="submit" class='btn'>Submit</button>
+    </form>
     <blockquote>
         <p>User stories:</p>
         <ul>
@@ -22,4 +36,6 @@
     <code>{{url}}/1</code>
     <h3>Will redirect to:</h3>
     <code>http://foo.com:80</code>
+    </div>
 </div>
+<script src='javascripts/index.js'></script>
