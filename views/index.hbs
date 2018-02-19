@@ -8,13 +8,21 @@
 <div class="container teal">
     <div class='card-panel z-depth-5'>
     <h1 id='title' class="header ">URL Shortener Microservice</h1>
-    <form>
+    <form id="form">
         <div class="input-field">
         <label>Enter URL to shorten</label>
-        <input type='text' placeholder='Enter Url'>
+        <input name="url" type='text' placeholder='Enter Url'>
         </div>
-        <button type="submit" class='btn'>Submit</button>
+        <button id="submit" type="submit" class='btn'>Submit</button>
     </form>
+    <div id="result" class="card-panel">
+        <h5>Shortened URL</h5>
+        <p id="shortUrl"></p>
+    </div>
+    <div id="jsonDiv" class="card-panel">
+        <h5>JSON File</h5>
+        <code id="jsonText"></code>
+    </div>
     <blockquote>
         <p>User stories:</p>
         <ul>
@@ -22,19 +30,19 @@
             <li>When I visit that shortened URL, it will redirect me to my original link.</li>
         </ul>
     </blockquote>
-    <h3>Example creation usage:</h3>
+    <h4>Example creation usage:</h4>
     <code>{{url}}/api/new/https://www.google.com</code>
     <br><code>{{url}}/api/new/http://foo.com:80</code>
-    <h3>Example creation output</h3>
+    <h4>Example creation output</h4>
     <code>{
         "_id":"1",
         "url":"http://foo.com:80",
         "shortUrl":"{{url}}/1"
         }
     </code>
-    <h3>Usage:</h3>
+    <h4>Usage:</h4>
     <code>{{url}}/1</code>
-    <h3>Will redirect to:</h3>
+    <h4>Will redirect to:</h4>
     <code>http://foo.com:80</code>
     </div>
 </div>
